@@ -1,0 +1,112 @@
+/* Genel Stil */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative; /* Okların konumu için referans noktası */
+}
+/* Fotoğraf Konteynırı */
+/* Fotoğraf Konteynırı */
+.photo-container {
+    position: relative;
+    width: 70vw;  /* Genişlik: Ekranın %70'i */
+    max-width: 70vw;  /* Maksimum genişlik: Ekranın %70'i */
+    height: 80vh;  /* Yükseklik: Ekranın %80'i */
+    text-align: center;
+    margin-top: 10vh;  /* Üstten %10 boşluk bırak */
+    margin-bottom: 10vh;  /* Alttan %10 boşluk bırak */
+    margin-left: auto; /* Yatayda ortalamak için */
+    margin-right: auto; /* Yatayda ortalamak için */
+    overflow: hidden; /* Fotoğraf konteynırının dışına taşmasını engeller */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Fotoğraf */
+#photo {
+    width: 100%;  /* Fotoğrafın genişliği konteynırla aynı olacak */
+    height: 100%;  /* Fotoğrafın yüksekliği konteynırla aynı olacak */
+    object-fit: contain;  /* Fotoğraf, konteynırın içinde kalacak şekilde boyutlandırılır */
+    border-radius: 15px; /* Fotoğrafın köşelerini yuvarlat */
+}
+
+/* Hover efekti */
+.photo-container:hover {
+    transform: translateY(-10px);
+}
+
+
+.image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px; /* Fotoğraf köşelerini yuvarlat */
+}
+
+#photo {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+    object-fit: cover;
+    border-radius: 15px; /* Fotoğrafın kendisini de yuvarlat */
+}
+
+/* Oklar */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+    background-color: rgba(41, 41, 41, 0.5);
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+/* Oklar Hover Efekti */
+.arrow:hover {
+    background-color: #D4AF37;  /* Hover durumunda sarı arka plan */
+    color: #111;  /* Ok rengi koyu olur */
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.7); /* Altın renginde parlama efekti */
+}
+
+/* Okları %10 içeriye kaydır */
+.left {
+    left: 5%; /* Sol ok %10 içeri kayacak */
+}
+
+.right {
+    right: 5%; /* Sağ ok %10 içeri kayacak */
+}
+
+
+/* Mouse Hover - Zoom efekti */
+.photo-container:hover #photo {
+    transform: scale(2);
+}
+
+#photo {
+    object-fit: cover;
+}
+
+#photo:hover {
+    cursor: pointer;
+}
+
+/* Küçük ekranlar için (responsive) */
+@media (max-width: 768px) {
+    .left {
+        left: -8vw;
+    }
+
+    .right {
+        right: -8vw;
+    }
+}

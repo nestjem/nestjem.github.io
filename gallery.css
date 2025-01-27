@@ -1,0 +1,66 @@
+/* 5x5 Galeri Düzeni */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 sütun */
+    gap: 10px; /* Konteynırlar arası boşluk */
+    padding: 20px;
+    width: 80%; /* Ekranın %80'ini kaplasın */
+    margin: 0 auto; /* Ortalamak için */
+}
+
+/* Her bir galeri öğesinin görünümü */
+.gallery-item {
+    text-align: center; /* Metni ortalar */
+    border-radius: 15px; /* Yuvarlatılmış köşeler */
+    overflow: hidden; /* Fotoğraf dışarı taşmasın */
+    position: relative;
+    background-color: #2b2b2b; /* Dark tema arka plan */
+    border: 3px solid transparent; /* Şu an için kenarlık yok, köşe rengi ile oluşturacağız */
+    box-shadow: 
+        0 10px 20px #d4af3700, /* Derinlik için gölge */
+        0 5px 10px #121212(0, 0, 0, 0.2), /* Daha ince bir gölge ekleyerek derinliği artır */
+        0 0 5px #121212(0, 0, 0, 0.6); /* Sarı köşe efekti ekleyerek 3D hissiyatı sağlar */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover efekti için geçiş */
+}
+
+/* Hover efekti - 3D etkiyi artırma */
+.gallery-item:hover {
+    transform: translateY(-10px); /* Yükseklik kaydırma */
+    box-shadow: 
+        0 15px 30px rgba(0, 0, 0, 0.5), /* Hover efektiyle daha güçlü gölgeler */
+        0 10px 15px rgba(0, 0, 0, 0.3),
+        0 0 10px #D4AF37; /* Sarımsı ışıltı */
+}
+
+/* Fotoğraf konteynırının arka plan resmi */
+.image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Proje adının stilini düzenleme */
+.project-title {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; /* Beyaz metin rengi, dark tema ile uyumlu */
+}
+
+/* Menü elemanlarını düzenlemek */
+.nav-links {
+    display: none;
+}
+
+.nav-links.active {
+    display: block;
+}
+
+/* Ekran genişliğine göre navbar düzeni */
+.navbar {
+    width: 80%; /* Ekranın %80'ini kaplasın */
+    margin: 0 auto; /* Ortalamak için */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fotoğraf Galerisi</title>
+    <link rel="stylesheet" href="galeri.css">
+    <link rel="stylesheet" href="head.css">
+</head>
+<body>
+    <!-- Sticky Menü Sağ Üstte -->
+    <nav class="navbar">
+        <div class="menu-icon" id="menuIcon" style="position: absolute; top: 10px; right: 10px; cursor: pointer;">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="../index.html">Ana Sayfa</a></li>
+            <li><a href="../about.html">Hakkımızda</a></li>
+            <li><a href="gallery.html">İnşaat Mimarlık</a></li>
+            <li><a href="#">Enerji</a></li>
+            <li><a href="#">Kentsel Dönüşüm</a></li>
+            <li><a href="#">İletişim</a></li>
+        </ul>
+    </nav>
+
+    <!-- Fotoğraf Konteynırı -->
+    <div class="photo-container">
+        <div class="image-wrapper">
+            <img src="proje_fotografları/galeri4/1.jpg" id="photo" alt="Photo">
+        </div>
+    </div>
+
+    <!-- Oklar (Fotoğraf Konteynırının dışında) -->
+    <button class="arrow left" onclick="changeImage(-1)">&#8592;</button>
+    <button class="arrow right" onclick="changeImage(1)">&#8594;</button>
+
+    <script src="galeri4.js"></script>
+    <script src="head.js"></script>
+</body>
+</html>

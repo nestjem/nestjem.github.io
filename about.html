@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda - Nestjem Group</title>
+    <link rel="stylesheet" href="about.css"> 
+    <link rel="stylesheet" href="head.css">  <!-- head.css dosyasını doğru şekilde çağırdık -->
+</head>
+<body>
+    
+    <!-- Header - Logo -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="images/Logo/nestjem_logo.png" alt="Nestjem Logo">
+            </div>
+        </div>
+    </header>
+    
+    <!-- Sticky Menü -->
+    <nav class="navbar" id="stickyNavbar">
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="about.html">Hakkımızda</a></li>
+                <li><a href="#">Kentsel Dönüşüm</a></li>
+                <li><a href="#">İnşaat Mimarlık</a></li>
+                <li><a href="#">Enerji</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+
+            <!-- Hamburger Menü (mobil ekranlar için) -->
+            <div class="menu-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sektörler & Misyon & Vizyon Bölümü -->
+    <section class="sectors-mission-vision">
+        <div class="container">
+            <!-- Hakkımızda Bölümü -->
+            <div class="about-section">
+                <h1>Hakkımızda</h1>
+                <p class="intro">Nestjem Group olarak, 1992 yılından beri <strong>Kentsel Dönüşüm</strong>, <strong>İnşaat Mimarlık</strong> ve <strong>Enerji</strong> sektörlerinde hizmet veriyoruz. Yenilikçi projelerimizle modern şehirler inşa ediyoruz.</p>
+            </div>
+            
+            <!-- Misyon & Vizyon Bölümü -->
+            <div class="mission-vision">
+                <div class="mission-card">
+                    <h2>Misyonumuz</h2>
+                    <p>Kalite ve güvenliği ön planda tutarak, sürdürülebilir ve yenilikçi çözümler üretmek.</p>
+                </div>
+                <div class="vision-card">
+                    <h2>Vizyonumuz</h2>
+                    <p>Teknoloji ve yeniliklerle sektörde lider olup, geleceğin şehirlerini inşa etmek.</p>
+                </div>
+            </div>
+            
+            <!-- Sektörler Bölümü -->
+            <div class="sectors">
+                <div class="sector-box">
+                    <h2>Kentsel Dönüşüm</h2>
+                    <p>Modern, güvenli ve çevre dostu şehirler inşa ederek, yaşanabilir alanlar oluşturuyoruz.</p>
+                </div>
+                <div class="sector-box">
+                    <h2>İnşaat & Mimarlık</h2>
+                    <p>Yenilikçi mimari çözümler ve sürdürülebilir yapılarla geleceğin yapılarını tasarlıyoruz.</p>
+                </div>
+                <div class="sector-box">
+                    <h2>Enerji</h2>
+                    <p>Yenilenebilir enerji projeleri geliştirerek, sürdürülebilir ve temiz bir dünya hedefliyoruz.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="head.js"></script>
+    <script>
+        // Hamburger menüyü açma/kapama fonksiyonu
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-links');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* Genel Stil */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: #bebebe;
+}
+
+/* Header - Logo */
+header {
+    background-color: #121212;
+    padding: 2vw;
+    text-align: center;
+    width: 95%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between; /* Logo ve menü arasındaki boşluğu ayarlayacağız */
+    align-items: center;
+}
+
+/* Logo */
+header .logo img {
+    width: 15vw;
+    max-width: 200px;
+    height: auto;
+    margin-left: auto; /* Logoyu sola yaslamak için */
+    margin-right: auto; /* Logoyu sağa yaslamak için */
+}
+
+/* Sticky Menü (Sağ Üstte) */
+.navbar {
+    position: fixed;
+    top: 20px;
+    right: 5%;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+/* Hamburger Menü */
+.menu-icon {
+    display: flex;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.menu-icon span {
+    width: 30px;
+    height: 4px;
+    background-color: #D4AF37;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* Açılır Menü */
+.nav-links {
+    display: none;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background-color: #121212;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.nav-links a {
+    color: #bebebe;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 10px;
+    display: block;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #D4AF37;
+}
+
+/* Menü Açıkken Görünür Olmasını Sağlar */
+.nav-links.active {
+    display: flex;
+    background-color: #313131e6; /* Açılınca koyu siyah arka plan */
+}
+
+/* Küçük ekranlarda menü genişliği ayarlanır */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        width: 200px;
+    }
+}
